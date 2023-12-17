@@ -10,12 +10,12 @@ body {
     background-size: cover;       /* Cover the entire container, maintaining aspect ratio */
     background-position: center bottom;  /* Display more of the bottom part of the image */
     color: white;
-    padding: 100px;
+    padding: 80px 50px;
 }
 
 h1 {
-    font-size: 2.5em; /* Adjust font size as needed */
-    margin: 0;
+    font-size: 3em; /* Adjust font size as needed */
+    margin: 20px 0;
 }
 
 .horizontal-bar {
@@ -25,7 +25,7 @@ h1 {
 }
 
 .subtitle {
-    font-size: 1.2em; /* Adjust font size as needed */
+    font-size: 1.2em;
 }
 
 .introduction {

@@ -18,6 +18,9 @@ h1 {
     font-size: 4em; /* Adjust font size as needed */
     margin: 20px 0;
     font-family: 'Times New Roman', Times, serif;
+    background-color: black; /* Set the background color to black */
+    padding: 20px; /* Add padding to create a rounded effect */
+    border-radius: 20px; /* Set border-radius to create rounded corners */
 }
 
 .horizontal-bar {

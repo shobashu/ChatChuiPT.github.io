@@ -7,9 +7,10 @@ body {
 .header {
     text-align: center;
     background-image: url('images/BEER.jpg');
-    background-size: cover;
+    background-size: cover;       /* Cover the entire container, maintaining aspect ratio */
+    background-position: center bottom;  /* Display more of the bottom part of the image */
     color: white;
-    padding: 50px; /* Adjust padding as needed */
+    padding: 50px;
 }
 
 h1 {

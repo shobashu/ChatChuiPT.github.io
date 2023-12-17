@@ -1,15 +1,28 @@
 body {
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    margin: 20px;
+}
+
+.header {
     text-align: center;
+    background-image: url('path/to/your/background-image.jpg');
+    background-size: cover;
+    color: white;
+    padding: 50px; /* Adjust padding as needed */
 }
 
 h1 {
-    color: #007bff;
+    font-size: 2.5em; /* Adjust font size as needed */
+    margin: 0;
 }
 
-p {
-    font-size: 18px;
+.horizontal-bar {
+    border: 1px solid white;
+    width: 50%;
+    margin: 10px auto;
+}
+
+.subtitle {
+    font-size: 1.2em; /* Adjust font size as needed */
 }

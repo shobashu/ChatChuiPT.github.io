@@ -32,6 +32,7 @@ h1 {
     margin: 20px auto;
     text-align: justify;
     color: black;
+    padding: 0 20px; 
 }
 
 p {

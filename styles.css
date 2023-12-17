@@ -10,11 +10,12 @@ body {
     background-size: cover;       /* Cover the entire container, maintaining aspect ratio */
     background-position: center bottom;  /* Display more of the bottom part of the image */
     color: white;
-    padding: 80px 50px;
+    padding: 120px 50px;
+    height: 400px
 }
 
 h1 {
-    font-size: 3em; /* Adjust font size as needed */
+    font-size: 4em; /* Adjust font size as needed */
     margin: 20px 0;
 }
 

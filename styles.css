@@ -10,7 +10,7 @@ body {
     background-size: cover;       /* Cover the entire container, maintaining aspect ratio */
     background-position: center bottom;  /* Display more of the bottom part of the image */
     color: white;
-    padding: 50px;
+    padding: 100px;
 }
 
 h1 {

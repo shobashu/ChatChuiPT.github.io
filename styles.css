@@ -26,3 +26,14 @@ h1 {
 .subtitle {
     font-size: 1.2em; /* Adjust font size as needed */
 }
+
+.introduction {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: justify;
+}
+
+p {
+    font-size: 1.1em; /* Adjust font size as needed */
+    line-height: 1.6; /* Adjust line height as needed */
+}

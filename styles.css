@@ -17,6 +17,7 @@ body {
 h1 {
     font-size: 4em; /* Adjust font size as needed */
     margin: 20px 0;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .horizontal-bar {

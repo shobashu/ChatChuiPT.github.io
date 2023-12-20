@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora&display=swap">
+
     <title>Every Season is Beerable</title>
     <style>
         body {
             cursor: url('https://github.com/shobashu/ChatChuiPT.github.io/raw/master/beer_cursor.cur'), auto;
         }
+
     </style>
 </head>
 <body>
@@ -24,23 +27,82 @@
             In your hand, you hold a beer to accompany this sunset. What kind of beer is it? There is a high chance 
             that your answer is: ‘a light blonde refreshing beer obviously!’. Summer makes us crave a lighter blond beer, 
             while winter is a season for brown beers, high on alcohol to warm us up. But… is it a stereotype? Is this idea
-            verifiable via statistics? That is what we want to explore in our analysis.
+            verifiable via statistics? That is what we want to explore in our analysis.<br>
             
             Many websites exist where people can give their opinion on the beer they tasted. RateBeer and BeerAdvocate
             are two of the main popular ones. Analyzing the evolution of parameters such as the given grade or the number of ratings 
             could offer valuable insights into the seasonal trends of various beer styles.
+            Which website do we want to consider? Let’s look at the country distribution of the two websites:
         </p>
+    </div>
+
+    
+    <h2 class="map-title">Distribution of Ratings in the World</h2>
+
     <div class="container">
-      <div class="iframe-container">
-        <iframe src="map_ba.html" width="50%" height="400"></iframe>
-      </div>
-      <div class="iframe-container">
-        <iframe src="map_rb.html" width="50%" height="400"></iframe>
-      </div>
-    </div>    
-    
-    
-    <iframe src="number_of_ratings_per_year.html" width="100%" height="300px"></iframe>
+        <div class="iframe-container">
+            <iframe src="html_files/map_ba.html" width="100%" height="400"></iframe>
+            <h3 class="map-title">BeerAdvocate</h3>
+        </div>
+        <div class="iframe-container">
+            <iframe src="html_files/map_rb.html" width="100%" height="400"></iframe>
+            <h3 class="map-title">RateBeer</h3>
+        </div>
+    </div>
+
+    <div class="intro-end">
+        <p>
+            BeerAdvocate seems to be very popular in the US, while the distribution of countries in RateBeer is wider.
+            We should pursue the RateBeer data. Now let’s try to catch seasonal trends! 
+        </p>
+    </div>
+
+    <div class="paragraph-1">
+        <h2 class="paragraph-1-title">Which caracteristic display seasonal trends?</h2>
+        <p>
+            RateBeer dataset offers insights on the beer ratings of the website between 2000 and 2016.
+            Among the most rated beer styles on RateBeer, we retrieve 3 beer styles that catched our
+            attention would be interesting to explore:
+            <ul>
+                <li>IPA: the most rated beer style on the website</li>
+                <li>Pilsener: among the 20 most rated beer styles, known to be fresh blond light beers</li>
+                <li>Belgian Strong Ale: among the 20 most rated beer styles, known to be dark strong beers</li>
+            </ul> 
+        </p>
+    </div>
+
+    <div class="paragraph-1">
+        <p>
+            We have our 3 characters: : “The Famous, the Cool and the Strong”. Based on our stereotype, we would especially
+            expect to see trends in summer for Pilsener and in winter for Belgian Strong Ale.
+            What could show that these beer styles are seasonal or not? 
+
+            The RateBeer dataset notably provides the ratings given by the users. The user provides an overall grade for the tasted beer,
+            but also a grade for the aroma, palate, taste, appearance of the beer, and the mean of all these grades gives the rating.
+            These 6 characteristics can be grouped together and considered as ‘user specific’. We can suppose that a beer receives different
+            ratings depending on when it is consumed during the winter or during the summer:
+            <br>
+            <br>
+
+            <strong>‘User specific characteristics':</strong>
+
+        </p>
+    </div>
+
+    <div class="plot-container">
+        <div class="iframe-plot-container" style="width: 60%;">
+            <iframe src="ipa_scores_plot.html" width="100%" height="300"></iframe>
+        </div>
+        <div class="iframe-plot-container" style="width: 60%;">
+            <iframe src="ipa_scores_plot.html" width="100%" height="300"></iframe>
+        </div>
+        <div class="iframe-plot-container" style="width: 60%;">
+            <iframe src="belgian_strong_ale_scores_plot.html" width="100%" height="300"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
     
 
     <!-- Which caracteristic display a seasonal bahaviour -->

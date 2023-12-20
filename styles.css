@@ -7,12 +7,12 @@ body {
 
 .header {
     text-align: center;
-    background-image: url('images/BEER.jpg');
+    background-image: url('images/website_image.jpg');
     background-size: cover;       /* Cover the entire container, maintaining aspect ratio */
     background-position: center bottom;  /* Display more of the bottom part of the image */
     color: white;
     padding: 120px 50px;
-    height: 400px
+    height: 300px
 }
 
 h1 {

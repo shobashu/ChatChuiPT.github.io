@@ -91,98 +91,113 @@
 
     <div class="plot-container">
         <div class="iframe-plot-container" style="width: 60%;">
-            <iframe src="ipa_scores_plot.html" width="100%" height="300"></iframe>
+            <iframe src="html_files/ipa_scores_plot.html" width="100%" height="300"></iframe>
         </div>
         <div class="iframe-plot-container" style="width: 60%;">
-            <iframe src="ipa_scores_plot.html" width="100%" height="300"></iframe>
+            <iframe src="html_files/pilsener_scores_plot.html" width="100%" height="300"></iframe>
         </div>
         <div class="iframe-plot-container" style="width: 60%;">
-            <iframe src="belgian_strong_ale_scores_plot.html" width="100%" height="300"></iframe>
+            <iframe src="html_files/belgian_strong_ale_scores_plot.html" width="100%" height="300"></iframe>
+        </div>
+        <div class="iframe-plot-container" style="width: 60%;">
+            <iframe src="html_files/overall_stl_plot_IPA.html" width="100%" height="300"></iframe>
         </div>
     </div>
 
+    <div class="paragraph-1">
+        <p>
+            Unfortunately, the residuals show the same amplitude as the ‘seasonal’ part of the plots, for each of
+            the characteristics and each of the beer styles. Well, the users do not feel a beer differently depending
+            on the season. Should we give up? Not yet.<br><br><br>
+
+            <strong>Normalised number of ratings</strong>
+            <br><br>
+            Indeed, we could think that Pilsener gets <strong>more ratings </strong> during the summer and Belgian Strong Ale during the winter.
+            If we infer that people rate at the same period when they drink the beer, variation in the <strong>number of ratings</strong> could be
+            representative of variation in beer consumption.<br>
+            In order not to be influenced by the global evolution of ratings on the website, let’s consider the normalized number of
+            ratings for our 3 beer styles:
+        </p>
+    </div>
+
+    <div class="plot-container-col">
+        <div class="iframe-plot-container-col" style="width: 60%;">
+            <iframe src="html_files/norm_nbr_ratings_ipa.html" width="100%" height="300"></iframe>
+        </div>
+        <div class="iframe-plot-container-col" style="width: 60%;">
+            <iframe src="html_files/norm_nbr_ratings_pils.html" width="100%" height="300"></iframe>
+        </div>
+        <div class="iframe-plot-container-col" style="width: 60%;">
+            <iframe src="html_files/norm_nbr_ratings_bsa.html" width="100%" height="300"></iframe>
+        </div>
+        <div class="iframe-plot-container-col" style="width: 60%;">
+            <iframe src="html_files/norm_nbr_ratings_bsa_STL.html" width="100%" height="300"></iframe>
+        </div>
+    </div>
+
+    <div class="paragraph-1">
+        <p>
+            Wow! We nicely see trends! According to our inference that rating means consumptions,
+            Pilsener seems to be more consumed during the summer while Belgian Strong ale is preferred during the winter!
+            We can then question the reason for these particular seasonalities. 
+        </p>
+    </div>
+
+    <div class="paragraph-1">
+        <h2 class="paragraph-1-title">Which caracteristic explains beer seasonality?</h2>
+        <p>
+            Maybe these different beer styles have different
+            alcohol degrees.
+        </p>
+    </div>
+
+    <div class="plot-container-row">
+        <div class="image-plot-container-row" style="width: 60%;">
+            <iframe src="html_files/ABV_3beerstyle_norm_plot.html" width="100%" height="300"></iframe>
+        </div>
+        <div class="image-plot-container-row" style="width: 60%;">
+            <iframe src="html_files/ABV_3beerstyle_boxplot.html" width="100%" height="300"></iframe>
+        </div>
+    </div>
+    
 </body>
 </html>
-    
 
-    <!-- Which caracteristic display a seasonal bahaviour -->
-    <div class="section" id="Which-caracteristic-display-a-seasonal-bahaviour">
-        <h2>Which caracteristic display a seasonal bahaviour?</h2>
-            <p>As a first approach for this seasonality quest, it was necessary to look at the most consummed
-                beers in the world ... to continue 
-                Dire qu’on a regardé les styles de bières les plus populaires en terme de nombre de ratings pour le monde entier  → On en a identifié 3 qui pourraient être intéressants à explorer:
-                IPA: style de bière avec le plus de ratings
-                Pilsener: un des top 20 style de bières les plus notées, blonde et légère, potentiellement avec des tendances en été
-                Belgian Strong Ale: un des top 20 style de bières les plus notées, brune et forte, potentiellement avec des tendances en hiver
-                Ces 3 styles sont nos personnages pour le début de l’histoire.
-            </p>
-            <h3>User specific caracteristics</h3>
-            <iframe src="ipa_scores_plot.html" width="100%" height="300px"></iframe>
-            <iframe src="belgian_strong_ale_scores_plot.html" width="100%" height="300px"></iframe>
-            <iframe src="pilsener_scores_plot.html" width="100%" height="300px"></iframe>
-            <p>Expliquer que les résultats sont à chier et qu’on a pas de tendances. Ce manque de résultats est sûrement dû au fait que ces caractéristiques sont ‘user specific’. C’est le user qui définit la note. Or, on voit que les users ne notent pas différemment les bières en fonction des saisons.
 
-            </p>
-            <iframe src="overall_stl_plot_IPA.html" width="100%" height="300px"></iframe>
-            <iframe src="overall_stl_plot_Belgian_Strong_Ale.html" width="100%" height="300px"></iframe>
-            <iframe src="overall_stl_plot_Pilsener.html" width="100%" height="300px"></iframe>
-            <h3>Beer specific caracteristics</h3>
-            <p>Normalized number of ratings</p>
-            <p>On veut s’intéresser au nbr de ratings, en se disant que peut-être, un style de bière reçoit plus d’avis pendant une saison que pendant une autre, ce qui voudrait dire qu’elle est aussi plus consommée pendant cette saison là.
-            Cependant, si on prend que le nombre de ratings en lui-même (pas normalisé) → son évolution sera influencée par l’évolution du nombre total de ratings! (e.g. si on voit une courbe d’évolution en fonction du temps pour une bière qui décrit une sinusoide, on peut penser qu’elle a des tendances saisonnières. Mais si on voit que l’évolution globale, pour toutes les bières, est aussi sinusoidale, alors la tendance saisonnière n’est pas particulière à la bière étudiée. Son évolution suit l’évolution globale).
-            Donc on NORMALISE aka: nombre de ratings(beer_subset) / nombre de ratings(all_beers) 
-            </p>
-            <iframe src="proportion_ratings_subplots.html" width="100%" height="300px"></iframe>
-            <iframe src="normalized_nb_ratings_stl_plot_Pilsener.html" width="100%" height="300px"></iframe>
-            <iframe src="normalized_nb_ratings_stl_plot_bsa.html" width="100%" height="300px"></iframe>
-            <iframe src="normalized_nb_ratings_stl_plot_IPA.html" width="100%" height="300px"></iframe>
-            <p>On a des trends! Super! On peut expliquer qu’on a aussi regardé pour d’autres styles de bières du top 20, sans mettre leurs plots sur le site car sinon ça ferait trop. Après avoir regardé toutes ces tendances, dire qu’on a remarqué que c’était souvent soit été soit hiver en termes de tendances, et que l’automne et le printemps sont généralement des saisons de transition.
-            </p>
-    </div>
-        
-    <!-- Which caracteristic explains beer seasonality? -->
-    <div class="section" id="Which-caracteristic-explains-beer-seasonality?">
-        <h2>Which caracteristic explains beer seasonality?</h2>
-        <!-- Subsections Which caracteristic explains beer seasonality? -->
-        <p>Pourquoi est-ce que ces bières ont des saisonnalités et pourquoi sont-elles différentes?
-            qu’est ce qui fait qu’on a des trends ? 
+</p>
+<h3>Check Seasonality for Different Alcohol Degrees</h3>
+<p>Peut être alors que les bières légères sont plus bues en été et les fortes en hiver?
+On va donc prendre toutes nos bières, les séparer en 2 catégories: light beers et strong beers, et regarder pour les deux subsets si elles ont des tendances saisonnières. Pour choisir comment séparer light et strong beers, on regarde la distribution du abv pour toutes les bières:
+</p>
+<iframe src="normalized_nb_ratings_stl_plot_light.html" width="100%" height="300px"></iframe>
+<iframe src="normalized_nb_ratings_stl_plot_strong.html" width="100%" height="300px"></iframe>
+<iframe src="Light_Beers_boxplot.html" width="100%" height="300px"></iframe>
+<iframe src="Mild_Beers_boxplot.html" width="100%" height="300px"></iframe>
+<iframe src="Strong_Beers_boxplot.html" width="100%" height="300px"></iframe>         
+<p>On a alors de jolies trends: light beers en été, strong beers en hiver. On se demande alors pour les deux styles si on a une différence significative. On veut faire un t-test entre les normalized number of ratings pour juin-août et les normalized number of ratings pour décembre-février. Cela nous permettrait de voir si la différence été-hiver est significative.</p>
 
-        </p>
-            <h3>Check Seasonality for Different Alcohol Degrees</h3>
-            
-            <iframe src="boxplot_abv.html" width="100%" height="300px"></iframe>
-            <iframe src="hist_abv.html" width="100%" height="300px"></iframe>
-            <p>Peut être alors que les bières légères sont plus bues en été et les fortes en hiver?
-            On va donc prendre toutes nos bières, les séparer en 2 catégories: light beers et strong beers, et regarder pour les deux subsets si elles ont des tendances saisonnières. Pour choisir comment séparer light et strong beers, on regarde la distribution du abv pour toutes les bières:
-            </p>
-            <iframe src="normalized_nb_ratings_stl_plot_light.html" width="100%" height="300px"></iframe>
-            <iframe src="normalized_nb_ratings_stl_plot_strong.html" width="100%" height="300px"></iframe>
-            <iframe src="Light_Beers_boxplot.html" width="100%" height="300px"></iframe>
-            <iframe src="Mild_Beers_boxplot.html" width="100%" height="300px"></iframe>
-            <iframe src="Strong_Beers_boxplot.html" width="100%" height="300px"></iframe>         
-            <p>On a alors de jolies trends: light beers en été, strong beers en hiver. On se demande alors pour les deux styles si on a une différence significative. On veut faire un t-test entre les normalized number of ratings pour juin-août et les normalized number of ratings pour décembre-février. Cela nous permettrait de voir si la différence été-hiver est significative.</p>
-            
-            <h3>Trends Depending on Color?</h3>
-            <p>Dire qu'on n'avait pas cette caractéristique sur nos dataframes. On a cherché sur internet, trouvé des range de SRM pour des styles de bières, mais pas d’algo où on peut donner nos styles de bières et ça donne une estimation du SRM.
-            Du coup, on a donné à chat GPT nos styles de bières (‘beer_style’) et demandé de nous donner une range de SRM values pour chaque style, puis de faire une moyenne entre le minimum et le maximum des range qu’il a donné pour avoir une valeur unique. Prévenir que ce sont des estimations donc à prendre avec des pincette, MAIS que c’est pas si grave pour la suite vu que prend de manière binaire (e.g. pale beers vs. dark beers).
-            </p>
-            <iframe src="normalized_nb_ratings_stl_plot_pale.html" width="100%" height="300px"></iframe>
-            <iframe src="normalized_nb_ratings_stl_plot_dark.html" width="100%" height="300px"></iframe>
-            <iframe src="normalized_nb_ratings_stl_plot_medium.html" width="100%" height="300px"></iframe>
-            
-            <iframe src="Pale_Beers_boxplot.html" width="100%" height="300px"></iframe>
-            <iframe src="Dark_Beers_boxplot.html" width="100%" height="300px"></iframe>
-            <iframe src="Medium_Beers_boxplot.html" width="100%" height="300px"></iframe>
-            <p></p>
-            <h3>Trends Depending on IBU (Bitterness)</h3>
-            <p>Même chose qu’avant concernant chatGPT. 
-            </p>
-            <iframe src="normalized_nb_ratings_stl_plot_bitter.html" width="100%" height="300px"></iframe>
-            <iframe src="normalized_nb_ratings_stl_plot_mild.html" width="100%" height="300px"></iframe>
-            
-            <iframe src="Bitter_Beers_boxplot.html" width="100%" height="300px"></iframe>
-            <p></p>
-    </div>
+<h3>Trends Depending on Color?</h3>
+<p>Dire qu'on n'avait pas cette caractéristique sur nos dataframes. On a cherché sur internet, trouvé des range de SRM pour des styles de bières, mais pas d’algo où on peut donner nos styles de bières et ça donne une estimation du SRM.
+Du coup, on a donné à chat GPT nos styles de bières (‘beer_style’) et demandé de nous donner une range de SRM values pour chaque style, puis de faire une moyenne entre le minimum et le maximum des range qu’il a donné pour avoir une valeur unique. Prévenir que ce sont des estimations donc à prendre avec des pincette, MAIS que c’est pas si grave pour la suite vu que prend de manière binaire (e.g. pale beers vs. dark beers).
+</p>
+<iframe src="normalized_nb_ratings_stl_plot_pale.html" width="100%" height="300px"></iframe>
+<iframe src="normalized_nb_ratings_stl_plot_dark.html" width="100%" height="300px"></iframe>
+<iframe src="normalized_nb_ratings_stl_plot_medium.html" width="100%" height="300px"></iframe>
+
+<iframe src="Pale_Beers_boxplot.html" width="100%" height="300px"></iframe>
+<iframe src="Dark_Beers_boxplot.html" width="100%" height="300px"></iframe>
+<iframe src="Medium_Beers_boxplot.html" width="100%" height="300px"></iframe>
+<p></p>
+<h3>Trends Depending on IBU (Bitterness)</h3>
+<p>Même chose qu’avant concernant chatGPT. 
+</p>
+<iframe src="normalized_nb_ratings_stl_plot_bitter.html" width="100%" height="300px"></iframe>
+<iframe src="normalized_nb_ratings_stl_plot_mild.html" width="100%" height="300px"></iframe>
+
+<iframe src="Bitter_Beers_boxplot.html" width="100%" height="300px"></iframe>
+<p></p>
+</div>
+
 
 
     </div>

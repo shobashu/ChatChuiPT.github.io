@@ -271,7 +271,20 @@
 
     <div class="paragraph-1">
         <p>
-            Ok so we will choose as follow:
+            Ok so based on these distributions, we will choose as follows:
+    
+            <ul>
+                <li>Pale Beers: SRM &lt;= 10</li>
+                <li>Dark Beers: SRM &gt;= 25</li>
+                <li>Mild Beers: IBU &lt; 30</li>
+                <li>Bitter Beers: IBU &gt; 30</li>
+            </ul> 
+        </p>
+    </div>
+
+    <div class="paragraph-1">
+        <p>
+            Let’s see if we can catch seasonal trends:
         </p>
     </div>
 
@@ -315,24 +328,37 @@
             <iframe src="html_files/boxplot_bitter_beers.html" width="100%" height="300"></iframe>
         </div>
     </div>
-    
-    
+
+    <div class="paragraph-1">
+        <p>
+            Very interesting! If we merge all our information, we can say that during the summer,
+            the most rated (and possibly consumed) beers are light, pale, and mild, while during the winter,
+            the preferred beers are strong, dark and bitter.<br><br>
+
+            However, if we think about it a minute, and imagine
+            again the beer menu. Aren’t the pale beers often lighter than dark ones? Aren’t strong beers generally
+            more bitter than light ones?        
+         </p>
+    </div>
+
+    <div class="paragraph-1">
+        <h2 class="paragraph-1-title">Is their a correlation between ABV, SRM and IBU?</h2>
+        <p>
+            Statistically, the 3 characteristics ABV, SRM, and IBU could simply be correlated:
+        </p>
+    </div>
+
+    <div class="plot-container">
+        <div class="iframe-plot-container" style="width: 60%;">
+            <iframe src="heatmap_plot_with_values1.html" width="100%" height="300px"></iframe>
+        </div>
+        <div class="iframe-plot-container" style="width: 60%;">
+            <iframe src="heatmap_plot.html" width="100%" height="300px"></iframe>
+        </div>
+    </div>
     
 </body>
 </html>
-
-    </div>
-    <!-- Causality Check on ABV, SRM, IBU -->
-    <div class="section" id="causality-check">
-        <h2> Causality Check on ABV, SRM, IBU</h2>
-        <!-- Content for Causality Check -->
-        <p>On vient d’analyser les trend saisonales pour des bières en fonction de leur degré d’alcool, couleur et amertume.
-           Cependant est-ce que ces caractéristiques ne sont pas juste corrélées? 
-           Prendre un exemple: les bières blondes (ou pales) sont souvent légères (degré alcool bas)  et les brunes (ou dark) sont souvent fortes (degré alcool élevé)-> corrélation entre les deux caractéristiques?</p>
-        <iframe src="heatmap_plot_with_values1.html" width="100%" height="300px"></iframe>
-        <iframe src="heatmap_plot.html" width="100%" height="300px"></iframe>
-
-    </div>
 
     <!-- Best Beers -->
     <div class="section" id="best-beers">

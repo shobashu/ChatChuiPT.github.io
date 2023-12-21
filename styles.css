@@ -94,7 +94,7 @@ h2.map-title {
 
 .paragraph-1 {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 0 auto;
     text-align: justify;
     color: black;
     padding: 0 20px;
@@ -154,3 +154,40 @@ li {
 .iframe-plot-container-row {
     margin-bottom: 2px; /* Adjust the margin as needed between plots */
 }
+
+.paragraph-small-title {
+    font-size: 1.2em; /* Adjust the font size as needed */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.plot-title {
+    text-align: center;
+    margin-top: 10px; /* Adjust the margin top for the titles */
+    font-size: 1em; /* Adjust the font size for the titles */
+    font-weight: normal; /* Remove bold style from titles */
+}
+
+
+.plot-container-row-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Distribute items along the main axis */
+    margin-top: 2px;
+}
+
+.iframe-plot-container-row-2 {
+    width: 60%; /* Adjust the width based on your preference */
+    margin-bottom: 2px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.iframe-plot-container-row-2:first-child {
+    margin-top: 150px; /* Adjust the top margin for the first graph */
+}
+
+.iframe-plot-container-row-2:last-child {
+    width: 45%; /* Adjust the width for the second graph */
+}
+

@@ -275,50 +275,51 @@
         </p>
     </div>
 
+    <div class="plot-container-row-2">
+        <div class="iframe-plot-container-row-2">
+            <h3 class="plot-title">Pale Beers: Seasonal Trends</h3>
+            <iframe src="html_files/norm_nbr_ratings_pale_beers_STL.html" width="100%" height="300"></iframe>
+        </div>
+        <div class="iframe-plot-container-row-2">
+            <iframe src="html_files/boxplot_pale_beers.html" width="100%" height="300"></iframe>
+        </div>
+    </div>
+
+
+    <div class="plot-container-row-2">
+        <div class="iframe-plot-container-row-2">
+            <h3 class="plot-title">Dark Beers: Seasonal Trends</h3>
+            <iframe src="html_files/norm_nbr_ratings_dark_beers_STL.html" width="100%" height="300"></iframe>
+        </div>
+        <div class="iframe-plot-container-row-2">
+            <iframe src="html_files/boxplot_dark_beers.html" width="100%" height="300"></iframe>
+        </div>
+    </div>
+
+    <div class="plot-container-row-2">
+        <div class="iframe-plot-container-row-2">
+            <h3 class="plot-title">Mild Beers: Seasonal Trends</h3>
+            <iframe src="html_files/norm_nbr_ratings_mild_beers_STL.html" width="100%" height="300"></iframe>
+        </div>
+        <div class="iframe-plot-container-row-2">
+            <iframe src="html_files/boxplot_mild_beers.html" width="100%" height="300"></iframe>
+        </div>
+    </div>
+
+    <div class="plot-container-row-2">
+        <div class="iframe-plot-container-row-2">
+            <h3 class="plot-title">Bitter Beers: Seasonal Trends</h3>
+            <iframe src="html_files/norm_nbr_ratings_bitter_beers_STL.html" width="100%" height="300"></iframe>
+        </div>
+        <div class="iframe-plot-container-row-2">
+            <iframe src="html_files/boxplot_bitter_beers.html" width="100%" height="300"></iframe>
+        </div>
+    </div>
     
-
-
     
     
 </body>
 </html>
-
-
-</p>
-<h3>Check Seasonality for Different Alcohol Degrees</h3>
-<p>Peut être alors que les bières légères sont plus bues en été et les fortes en hiver?
-On va donc prendre toutes nos bières, les séparer en 2 catégories: light beers et strong beers, et regarder pour les deux subsets si elles ont des tendances saisonnières. Pour choisir comment séparer light et strong beers, on regarde la distribution du abv pour toutes les bières:
-</p>
-<iframe src="normalized_nb_ratings_stl_plot_light.html" width="100%" height="300px"></iframe>
-<iframe src="normalized_nb_ratings_stl_plot_strong.html" width="100%" height="300px"></iframe>
-<iframe src="Light_Beers_boxplot.html" width="100%" height="300px"></iframe>
-<iframe src="Mild_Beers_boxplot.html" width="100%" height="300px"></iframe>
-<iframe src="Strong_Beers_boxplot.html" width="100%" height="300px"></iframe>         
-<p>On a alors de jolies trends: light beers en été, strong beers en hiver. On se demande alors pour les deux styles si on a une différence significative. On veut faire un t-test entre les normalized number of ratings pour juin-août et les normalized number of ratings pour décembre-février. Cela nous permettrait de voir si la différence été-hiver est significative.</p>
-
-<h3>Trends Depending on Color?</h3>
-<p>Dire qu'on n'avait pas cette caractéristique sur nos dataframes. On a cherché sur internet, trouvé des range de SRM pour des styles de bières, mais pas d’algo où on peut donner nos styles de bières et ça donne une estimation du SRM.
-Du coup, on a donné à chat GPT nos styles de bières (‘beer_style’) et demandé de nous donner une range de SRM values pour chaque style, puis de faire une moyenne entre le minimum et le maximum des range qu’il a donné pour avoir une valeur unique. Prévenir que ce sont des estimations donc à prendre avec des pincette, MAIS que c’est pas si grave pour la suite vu que prend de manière binaire (e.g. pale beers vs. dark beers).
-</p>
-<iframe src="normalized_nb_ratings_stl_plot_pale.html" width="100%" height="300px"></iframe>
-<iframe src="normalized_nb_ratings_stl_plot_dark.html" width="100%" height="300px"></iframe>
-<iframe src="normalized_nb_ratings_stl_plot_medium.html" width="100%" height="300px"></iframe>
-
-<iframe src="Pale_Beers_boxplot.html" width="100%" height="300px"></iframe>
-<iframe src="Dark_Beers_boxplot.html" width="100%" height="300px"></iframe>
-<iframe src="Medium_Beers_boxplot.html" width="100%" height="300px"></iframe>
-<p></p>
-<h3>Trends Depending on IBU (Bitterness)</h3>
-<p>Même chose qu’avant concernant chatGPT. 
-</p>
-<iframe src="normalized_nb_ratings_stl_plot_bitter.html" width="100%" height="300px"></iframe>
-<iframe src="normalized_nb_ratings_stl_plot_mild.html" width="100%" height="300px"></iframe>
-
-<iframe src="Bitter_Beers_boxplot.html" width="100%" height="300px"></iframe>
-<p></p>
-</div>
-
-
 
     </div>
     <!-- Causality Check on ABV, SRM, IBU -->

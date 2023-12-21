@@ -178,7 +178,7 @@ li {
 }
 
 .iframe-plot-container-row-2 {
-    width: 60%; /* Adjust the width based on your preference */
+    width: 50%; /* Adjust the width based on your preference */
     margin-bottom: 2px;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
@@ -188,6 +188,6 @@ li {
 }
 
 .iframe-plot-container-row-2:last-child {
-    width: 45%; /* Adjust the width for the second graph */
+    width: 35%; /* Adjust the width for the second graph */
 }
 

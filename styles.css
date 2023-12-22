@@ -185,13 +185,14 @@ li {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-/* If the first child needs specific styling */
+/* Remove any right margin from the first iframe container */
 .iframe-plot-container-row-2:first-child {
-   margin-left: 10px;
+    margin-right: 0; /* Ensure there's no space after the first iframe */
 }
 
-/* The last-child selector may not be necessary if both iframes should look the same */
-.iframe-plot-container-row-2:last-child {
-    margin-right: 0; /* Ensure there's no space after the last iframe */
+/* Remove any left margin from the second iframe container */
+.iframe-plot-container-row-2:nth-child(2) {
+    margin-left: 0; /* Ensure there's no space before the second iframe */
 }
+
 

@@ -180,6 +180,7 @@ li {
 .iframe-plot-container-row-2 {
     width: calc(50% - 10px);; /* Adjust the width based on your preference */
     margin-bottom: 0; /* Reduce space between rows */
+    padding-right: 0; /* If padding is creating space on the right */
     margin-right: 0;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }

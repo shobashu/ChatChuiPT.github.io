@@ -182,13 +182,12 @@ li {
     flex: 1; /* Each container will take up an equal amount of space */
     margin-bottom: 0;
     padding-right: 0; /* Assuming you want no padding on the right */
-    margin-right: 1px; /* Add some space between the iframes */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 /* If the first child needs specific styling */
 .iframe-plot-container-row-2:first-child {
-    margin-right: 5px; /* Add some space after the first iframe */
+   margin-left: 10px;
 }
 
 /* The last-child selector may not be necessary if both iframes should look the same */

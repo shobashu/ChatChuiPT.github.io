@@ -207,14 +207,14 @@ li {
 }
 
 .plot-container-col42 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* This sets the container height to be the full viewport height */
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin-top: 20px; /* Adjust the margin as needed for spacing */
 }
 
 /* If you're embedding the plot with an img tag, you might want to style it as well */
 .iframe-plot-container-col42 {
-    margin-right: 0; /* Ensure there's no space after the first iframe */
-    margin-left: 0;
+    margin-bottom: 2px;
 }

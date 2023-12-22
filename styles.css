@@ -214,7 +214,7 @@ li {
 }
 
 /* If you're embedding the plot with an img tag, you might want to style it as well */
-.plot-container42 img {
-  max-width: 100%;
-  height: auto; /* This will ensure the image is responsive and maintains aspect ratio */
+.iframe-plot-container42 {
+    margin-right: 0; /* Ensure there's no space after the first iframe */
+    margin-left: 0;
 }

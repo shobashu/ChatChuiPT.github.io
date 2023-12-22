@@ -173,7 +173,7 @@ li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between; /* You can change this to 'flex-start' to align items to the start of the container */
+    justify-content: flex-start; /* You can change this to 'flex-start' to align items to the start of the container */
     margin-top: 2px;
     flex-wrap: nowrap;/* You may add 'flex-wrap: nowrap;' if you want to ensure that the iframes stay in a single row */
 }

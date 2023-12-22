@@ -206,7 +206,7 @@ li {
     flex-wrap: nowrap; /* Ensure that the iframes stay in a single row */
 }
 
-.plot-container42 {
+.plot-container-col42 {
   display: flex;
   justify-content: center;
   align-items: center;

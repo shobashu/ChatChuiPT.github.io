@@ -55,17 +55,17 @@
 
     <div class="intro-end">
         <p>
-            BeerAdvocate seems to be very popular in the US, while the distribution of countries in RateBeer is wider.
-            We should pursue the RateBeer data. Now let’s try to catch seasonal trends! 
+            BeerAdvocate seems to be very popular in the US, while the distribution of countries in RateBeer is wider. 
+            Pursuing the RateBeer data, let's try to identify seasonal trends!
         </p>
     </div>
 
     <div class="paragraph-1">
-        <h2 class="paragraph-1-title">Which caracteristic display seasonal trends?</h2>
+        <h2 class="paragraph-1-title">Which characteristics display seasonal trends?</h2>
         <p>
             RateBeer dataset offers insights on the beer ratings of the website between 2000 and 2016.
-            Among the most rated beer styles on RateBeer, we retrieve 3 beer styles that catched our
-            attention would be interesting to explore:
+            Among the most rated beer styles on RateBeer, 
+            we retrieve 3 beer styles that catches our attention and might be interesting to explore:
             <ul>
                 <li>IPA: the most rated beer style on the website</li>
                 <li>Pilsener: among the 20 most rated beer styles, known to be fresh blond light beers</li>
@@ -76,14 +76,14 @@
 
     <div class="paragraph-1">
         <p>
-            We have our 3 characters: : “The Famous, the Cool and the Strong”. Based on our stereotype, we would especially
-            expect to see trends in summer for Pilsener and in winter for Belgian Strong Ale.
+            Considering these three characters: 'The Famous, the Cool, and the Strong,' one would particularly 
+            anticipate observing summer trends for Pilsener and winter trends for Belgian Strong Ale.
             What could show that these beer styles are seasonal or not? 
 
-            The RateBeer dataset notably provides the ratings given by the users. The user provides an overall grade for the tasted beer,
-            but also a grade for the aroma, palate, taste, appearance of the beer, and the mean of all these grades gives the rating.
-            These 6 characteristics can be grouped together and considered as ‘user specific’. We can suppose that a beer receives different
-            ratings depending on when it is consumed during the winter or during the summer:
+            The RateBeer dataset notably provides the ratings given by the users. The user provides an overall grade 
+            for the tasted beer, but also a grade for the aroma, palate, taste, appearance of the beer, and the mean of 
+            all these grades gives the rating. These 6 characteristics can be grouped together and considered as ‘user specific’. 
+            It can be supposed that a beer receives different ratings depending on when it is consumed—whether in winter or summer.: 
             <br>
             <br>
 
@@ -105,6 +105,10 @@
             <h3 class="map-title">Standardized scores for Belgian Strong Ale (RateBeer) from 2003 to 2016</h3>
             <iframe src="html_files/belgian_strong_ale_scores_plot.html" width="100%" height="300"></iframe>
         </div>
+            <p>
+                Trends from the evolution of criteria over time are not evident for any of the three beer styles.
+                What about the STL plot ?
+            </p>
         <div class="iframe-plot-container" style="width: 60%;">
             <h3 class="map-title">STL plot on standardized overall score of IPAs from 2003 to 2016</h3>
             <iframe src="html_files/overall_stl_plot_IPA.html" width="100%" height="300"></iframe>

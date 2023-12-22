@@ -173,26 +173,26 @@ li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start; /* You can change this to 'flex-start' to align items to the start of the container */
+    justify-content: flex-start; /* Align items to the start of the container */
     margin-top: 2px;
-    flex-wrap: nowrap;/* You may add 'flex-wrap: nowrap;' if you want to ensure that the iframes stay in a single row */
+    flex-wrap: nowrap; /* Ensure that the iframes stay in a single row */
 }
 
 .iframe-plot-container-row-2 {
-    /* width: calc(50% - 10px);; This line has a double semicolon, you should fix it to a single one */
-    width: calc(50% - 5px); /* Adjust the subtracted value to reduce the space */
+    flex: 1; /* Each container will take up an equal amount of space */
     margin-bottom: 0;
-    padding-right: 0;
-    margin-right: 0; /* Adjust or remove negative margins if necessary */
-    flex: 1;
-    box-sizing: border-box;
+    padding-right: 0; /* Assuming you want no padding on the right */
+    margin-right: 5px; /* Add some space between the iframes */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
+/* If the first child needs specific styling */
 .iframe-plot-container-row-2:first-child {
-    margin-top: 0; /* Adjust the top margin for the first graph */
+    margin-right: 5px; /* Add some space after the first iframe */
 }
 
+/* The last-child selector may not be necessary if both iframes should look the same */
 .iframe-plot-container-row-2:last-child {
-    width: 0; /* Adjust the width for the second graph */
+    margin-right: 0; /* Ensure there's no space after the last iframe */
 }
 

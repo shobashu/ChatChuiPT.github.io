@@ -359,9 +359,10 @@
 
     <div class="plot-container">
         <div class="iframe-plot-container" style="width: 60%;">
-            <iframe src="html_files/output.png" width="100%" height="300px"></iframe>
+            <iframe src="html_files/output.png" width="100%"></iframe>
         </div>
     </div>
+
     <div class="paragraph-1">
         <p>
             Indeed, there is a moderate correlation between these 3 factors. Light beers are more likely to be pale and mild, while dark beers have more chance to be dark and bitter. We see that bitterness and alcohol degree are the most correlated characteristics. 
@@ -374,15 +375,26 @@
     <div class="paragraph-1">
         <h2 class="paragraph-1-title">Can we estimate a seasonality metrics per beer style ?</h2>
         <p>
-            For each beer style, we calculate the seasonality metrics, defined by:<br>
-            $$100\frac{std(\text{seasonality}) - std(\text{residuals})}{\text{normalized number of ratings}}\cdot \text{peak month}_{-1 \text{ if winter, } +1 \text{ if summer}}^{0 \text{ otherwise}}$$
-            Now, the goal is to determine which style is the most seasonal, meaning which beer style is truly specific to a season. To achieve this, a seasonality degree was computed to quantify the seasonality of each beer style for winter and summer. This degree is first calculated for each chosen year, and the mean for every year provides the overall seasonality degree. The more likely a beer style is consumed during summer, the higher its seasonality degree will be along the positive y-axis.  The more likely a beer style is consumed during winter, the higher its seasonality degree will be along the negative y-axis. The resulting ranking is as follows:
+            Now, the goal is to determine which style is the most seasonal, meaning which beer style is truly specific to a season.
+            To achieve this, a seasonality degree was computed to quantify the seasonality of each beer style for winter and summer.
+            This degree is first calculated for each chosen year, and the mean for every year provides the overall seasonality degree.
+            The more likely a beer style is consumed during summer, the higher its seasonality degree will be along the positive y-axis.
+            The more likely a beer style is consumed during winter, the higher its seasonality degree will be along the negative y-axis.
+            The seasonality metrics is defined by:<br>
+            $$100\frac{std(\text{seasonality}) - std(\text{residuals})}{\text{normalized number of ratings}}\cdot \text{peak month}\{^{-1 \text{ if winter, } +1 \text{ if summer}}_{\text{otherwise 0}}$$
+            <br><br>
+            The resulting ranking is as follows:    
         </p>
 
+        <h3 class="paragraph-small-title">Most Seasonal Beer Style</h3>
         <div class="plot-container">
             <div class="iframe-plot-container" style="width: 100%;">
                 <iframe src="html_files/seasonal_beers.html" width="100%" height="300px"></iframe>
             </div>
+        </div>
+
+        <h3 class="paragraph-small-title">Difference in Standardized ABV for summer and winter beers</h3>
+        <div class="plot-container">
             <div class="iframe-plot-container" style="width: 100%;">
                 <iframe src="html_files/seasonal_beers_box_plot.html" width="100%" height="300px"></iframe>
             </div>
@@ -403,17 +415,18 @@
     <div class="paragraph-1">
         <h2 class="paragraph-1-title">Is there an influence on the location in the seasonality ?</h2>
         <p>
-            For obvious reasons, the southern hemisphere will have seasons shifted by 6 months relatively to the northern hemisphere. Throughout all the prior analysis, we omitted the effect of the location on the rating itself.
-            In this part, we will focus on one beer that is more suited for summer: <strong>Pale Lager</strong>. 
+            For obvious reasons, the southern hemisphere will have seasons shifted by 6 months relatively to the northern hemisphere.
+            Throughout all the prior analysis,the effect of the location on the rating itself was omitted.
+            This part will focus on one beer that is more suited for summer (according to the degree of seasonality degree metric): <strong>Pale Lager</strong>. 
         </p>
 
         <p>
-            In the plot below, we can see the <strong>Europe</strong> and <strong>North America</strong> ratings tends to reach their highest number in summer, as expected.
-            However, when looking at the <strong>Oceania</strong> plot, we see that the ratings tends to reach their highest number shifted by 6 months.
+            The plot below shows that the <strong>Europe</strong> and <strong>North America</strong> ratings tends to reach their highest number in summer, as expected.
+            However, when looking at the <strong>Oceania</strong> plot, the ratings tends to reach their highest number shifted by 6 months later than in the northern hemisphere.
         </p>
 
         <p>
-            This gives us more confidence about the hypothesis that the <strong>Pale Lager</strong> is more often consummed during hot seasons (summer in northern europe) than cold seasons.
+            This gives us more confidence about the hypothesis that the <strong>Pale Lager</strong> is more often consummed during summer, independently of the location.
         </p>
 
         <div class="plot-container">
@@ -423,8 +436,10 @@
         </div>
 
         <p>
-            This result however also shows that we should have taken into the location of the rating when analyzing it.
-            However, when comparing the proportion of ratings from the southern hemisphere to the northern hemisphere, we realized the effect was really negligeable (in the case of the <strong>Pale Lager</strong>, there are 25 times less ratings from Oceania than from Europe and North America)
+            However, this result also shows that taking into the location of the rating when analyzing could lead to less biased conclusions.
+            On the other hand, comparing the proportion of ratings from the southern hemisphere to the northern hemisphere shows that the effect is really negligeable
+            <br><br>
+            In the case of the <strong>Pale Lager</strong>, there are 25 times less ratings from Oceania than from Europe and North America
         </p>
     </div>
 

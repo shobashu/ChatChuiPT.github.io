@@ -173,24 +173,26 @@ li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between; /* Distribute items along the main axis */
+    justify-content: space-between; /* You can change this to 'flex-start' to align items to the start of the container */
     margin-top: 2px;
+    /* You may add 'flex-wrap: nowrap;' if you want to ensure that the iframes stay in a single row */
 }
 
 .iframe-plot-container-row-2 {
-    width: calc(50% - 10px);; /* Adjust the width based on your preference */
-    margin-bottom: 0; /* Reduce space between rows */
-    padding-right: 0; /* If padding is creating space on the right */
-    margin-right:-10px;
+    /* width: calc(50% - 10px);; This line has a double semicolon, you should fix it to a single one */
+    width: calc(50% - 5px); /* Adjust the subtracted value to reduce the space */
+    margin-bottom: 0;
+    padding-right: 0;
+    margin-right: 0; /* Adjust or remove negative margins if necessary */
     flex: 1;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box;
 }
 
 .iframe-plot-container-row-2:first-child {
-    margin-top: auto; /* Adjust the top margin for the first graph */
+    margin-top: 0; /* Adjust the top margin for the first graph */
 }
 
 .iframe-plot-container-row-2:last-child {
-    width: auto; /* Adjust the width for the second graph */
+    width: 0; /* Adjust the width for the second graph */
 }
 

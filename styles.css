@@ -175,7 +175,7 @@ li {
     align-items: center;
     justify-content: space-between; /* You can change this to 'flex-start' to align items to the start of the container */
     margin-top: 2px;
-    /* You may add 'flex-wrap: nowrap;' if you want to ensure that the iframes stay in a single row */
+    flex-wrap: nowrap;/* You may add 'flex-wrap: nowrap;' if you want to ensure that the iframes stay in a single row */
 }
 
 .iframe-plot-container-row-2 {

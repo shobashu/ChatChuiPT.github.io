@@ -358,11 +358,12 @@
     </div>
 
     <!-- Best Beers -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
     <div class="paragraph-1">
         <h2 class="paragraph-1-title">Can we estimate a seasonality metrics per beer style ?</h2>
         <p>
-            On définit un degré de saisonnalité:
-            For each year: [std(seasonality) - std(residuals] / normalized number of ratings)] -> compute the mean for each year = seasonality_degree.
+            For each beer style, we calculate the seasonality metrics, defined by:<br>
+            $$\frac{std(\text{seasonality}) - std(\text{residuals})}{\text{normalized number of ratings}}$$
         </p>
     </div>
 
@@ -374,12 +375,22 @@
             <iframe src="html_files/seasonal_beers_box_plot.html" width="100%" height="300px"></iframe>
         </div>
     </div>
+
+    <div class="paragraph-1">
+        <p>
+            We end up we a list of beer styles that are the most seasonal for the winter or for the summer.
+            The results are quite coherent with our prior analysis.
+            We can see the <strong>OkotoberFest</strong> is the most seasonal beer of summer and the <strong>Imperial Pils / Strong Pale Ale</strong> the most seasonal beer style of winter.
+        </p>
+
+        <p>
+            We can clearly see a distinction in the abv of the summer oriented beers compared with the winter oriented beers style.
+            For the winter beer style, the average abv is around <strong>7.4%</strong> whereas the for the summer beer style it is around <strong>5.5%</strong>.
+        </p>
+    </div>
 </body>
 </html>
 
-    
-
-    </div>
 
     <!-- Does it follow the hemisphere -->
     <div class="section" id="best-beers">

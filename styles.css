@@ -143,6 +143,20 @@ li {
     margin-bottom: 2px; /* Adjust the margin as needed between plots */
 }
 
+.plot-container-col-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.iframe-plot-container-col-2 {
+    width: 100%; /* Make sure the iframe takes up the entire width */
+    margin-bottom: 2px;
+    margin: auto; /* Center the iframe horizontally */
+}
+
 .plot-container-row {
     display: flex;
     flex-direction: row; /* Arrange items in a column */
@@ -217,4 +231,14 @@ li {
 /* If you're embedding the plot with an img tag, you might want to style it as well */
 .iframe-plot-container-col42 {
     margin-bottom: 2px;
+}
+
+.image-container {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
 }

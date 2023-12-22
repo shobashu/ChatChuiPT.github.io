@@ -197,4 +197,31 @@ li {
     margin-right: 0;
 }
 
+.plot-container-row-3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start of the container */
+    margin-top: 2px;
+    flex-wrap: nowrap; /* Ensure that the iframes stay in a single row */
+}
+
+.iframe-plot-container-row-3 {
+    flex: 1; /* Each container will take up an equal amount of space */
+    margin-bottom: 0;
+    padding-right: 0; /* Assuming you want no padding on the right */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Remove any right margin from the first iframe container */
+.iframe-plot-container-row-3:first-child {
+    margin-right: 0; /* Ensure there's no space after the first iframe */
+    margin-left: 0;
+}
+
+/* Remove any left margin from the second iframe container */
+.iframe-plot-container-row-:nth-child(2) {
+    margin-left: 0; /* Ensure there's no space before the second iframe */
+    margin-right: 0;
+}
 

@@ -206,20 +206,15 @@ li {
     flex-wrap: nowrap; /* Ensure that the iframes stay in a single row */
 }
 
-.iframe-plot-container-row-3 {
-    flex: 1; /* Each container will take up an equal amount of space */
-    margin-bottom: 0;
-    padding-right: 0; /* Assuming you want no padding on the right */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+.plot-container42 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This sets the container height to be the full viewport height */
 }
 
-/* Remove any right margin from the first iframe container */
-.iframe-plot-container-row-3:first-child {
-    margin-right: 0; /* Ensure there's no space after the first iframe */
+/* If you're embedding the plot with an img tag, you might want to style it as well */
+.plot-container42 img {
+  max-width: 100%;
+  height: auto; /* This will ensure the image is responsive and maintains aspect ratio */
 }
-
-/* Remove any left margin from the second iframe container */
-.iframe-plot-container-row-:nth-child(2) {
-    margin-left: 0; /* Ensure there's no space before the second iframe */
-}
-

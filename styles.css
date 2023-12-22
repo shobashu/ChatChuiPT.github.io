@@ -216,12 +216,10 @@ li {
 /* Remove any right margin from the first iframe container */
 .iframe-plot-container-row-3:first-child {
     margin-right: 0; /* Ensure there's no space after the first iframe */
-    margin-left: 0;
 }
 
 /* Remove any left margin from the second iframe container */
 .iframe-plot-container-row-:nth-child(2) {
     margin-left: 0; /* Ensure there's no space before the second iframe */
-    margin-right: 0;
 }
 

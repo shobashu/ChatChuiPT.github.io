@@ -358,53 +358,65 @@
 
     </div>
 
-    <!-- Best Beers -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
     <div class="paragraph-1">
         <h2 class="paragraph-1-title">Can we estimate a seasonality metrics per beer style ?</h2>
         <p>
             For each beer style, we calculate the seasonality metrics, defined by:<br>
-            $$\frac{std(\text{seasonality}) - std(\text{residuals})}{\text{normalized number of ratings}}$$
+            $$100\frac{std(\text{seasonality}) - std(\text{residuals})}{\text{normalized number of ratings}}\cdot \text{peak month}_{-1 \text{ if winter, } +1 \text{ if summer}}^{0 \text{ otherwise}}$$
         </p>
-    </div>
 
-    <div class="plot-container">
-        <div class="iframe-plot-container" style="width: 60%;">
-            <iframe src="html_files/seasonal_beers.html" width="100%" height="300px"></iframe>
+        <div class="plot-container">
+            <div class="iframe-plot-container" style="width: 100%;">
+                <iframe src="html_files/seasonal_beers.html" width="100%" height="300px"></iframe>
+            </div>
+            <div class="iframe-plot-container" style="width: 100%;">
+                <iframe src="html_files/seasonal_beers_box_plot.html" width="100%" height="300px"></iframe>
+            </div>
         </div>
-        <div class="iframe-plot-container" style="width: 60%;">
-            <iframe src="html_files/seasonal_beers_box_plot.html" width="100%" height="300px"></iframe>
-        </div>
-    </div>
 
-    <div class="paragraph-1">
         <p>
             We end up we a list of beer styles that are the most seasonal for the winter or for the summer.
             The results are quite coherent with our prior analysis.
-            We can see the <strong>OkotoberFest</strong> is the most seasonal beer of summer and the <strong>Imperial Pils / Strong Pale Ale</strong> the most seasonal beer style of winter.
+            We can see that the <strong>English Strong Ale</strong> is the most seasonal beer of summer and the <strong>Old Ale</strong> the most seasonal beer style of winter.
         </p>
 
         <p>
-            We can clearly see a distinction in the abv of the summer oriented beers compared with the winter oriented beers style.
-            For the winter beer style, the average abv is around <strong>7.4%</strong> whereas the for the summer beer style it is around <strong>5.5%</strong>.
+            When looking at the box plot above, we can clearly see a distinction in the standardized ABV of the summer oriented beers compared with the winter oriented beers style.
+            A winter beer style will tend to a higher ABV than a summer beer style.
         </p>
     </div>
+
+    <div class="paragraph-1">
+        <h2 class="paragraph-1-title">Is there an influence on the location in the seasonality ?</h2>
+        <p>
+            For obvious reasons, the southern hemisphere will have seasons shifted by 6 months relatively to the northern hemisphere. Throughout all the prior analysis, we omitted the effect of the location on the rating itself.
+            In this part, we will focus on one beer that is more suited for summer: <strong>Pale Lager</strong>. 
+        </p>
+
+        <p>
+            In the plot below, we can see the <strong>Europe</strong> and <strong>North America</strong> ratings tends to reach their highest number in summer, as expected.
+            However, when looking at the <strong>Oceania</strong> plot, we see that the ratings tends to reach their highest number shifted by 6 months.
+        </p>
+
+        <p>
+            This gives us more confidence about the hypothesis that the <strong>Pale Lager</strong> is more often consummed during hot seasons (summer in northern europe) than cold seasons.
+        </p>
+
+        <div class="plot-container">
+            <div class="iframe-plot-container" style="width: 100%;">
+                <iframe src="html_files/pale_lager.html" width="100%"></iframe>
+            </div>
+        </div>
+
+        <p>
+            This result however also shows that we should have taken into the location of the rating when analyzing it.
+            However, when comparing the proportion of ratings from the southern hemisphere to the northern hemisphere, we realized the effect was really negligeable (in the case of the <strong>Pale Lager</strong>, there are 25 times less ratings from Oceania than from Europe and North America)
+        </p>
+    </div>
+
 </body>
 </html>
-
-
-    <!-- Does it follow the hemisphere -->
-    <div class="section" id="best-beers">
-        <h2> Best Beers</h2>
-        <!-- Content for Best Beers -->
-        <p> Bla bla hemisphère nord et sud c'est tout inversé
-        Se dire que dans notre analyse, on a fait sur le monde entier, dont plus de 95% sont hémisphères nord. Mais vu que les saisons sont inversées dans l'hémisphère sud, on split en 3 régions. On choisit notamment Océanie pour hémisphère sud car c’est là où il y’a le plus de ratings (y’en a pas bcp en amérique du sud ou en afrique subsaharienne) 
-
-        On prend les 2 beer styles qu’on a identifié comme les plus saisonnaux en été et hiver dans la partie juste avant, et on étudie leur saisonnalité pour nos 3 régions:
-        </p>
-    </div>
-
-    </div>
 
     <!-- Conclusion -->
     <div class="section" id="best-beers">

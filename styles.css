@@ -178,16 +178,17 @@ li {
 }
 
 .iframe-plot-container-row-2 {
-    width: 50%; /* Adjust the width based on your preference */
-    margin-bottom: 2px;
+    width: calc(50% - 10px);; /* Adjust the width based on your preference */
+    margin-bottom: 0; /* Reduce space between rows */
+    margin-right: 0;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .iframe-plot-container-row-2:first-child {
-    margin-top: 150px; /* Adjust the top margin for the first graph */
+    margin-top: auto; /* Adjust the top margin for the first graph */
 }
 
 .iframe-plot-container-row-2:last-child {
-    width: 35%; /* Adjust the width for the second graph */
+    width: auto; /* Adjust the width for the second graph */
 }
 

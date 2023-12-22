@@ -356,17 +356,17 @@
             <iframe src="heatmap_plot.html" width="100%" height="300px"></iframe>
         </div>
     </div>
-    
-</body>
-</html>
 
     <!-- Best Beers -->
-    <div class="section" id="best-beers">
-        <h2> Best Beers</h2>
-        <!-- Content for Best Beers -->
-        <p>On définit un degré de saisonnalité:
-        For each year: [std(seasonality) - std(residuals] / normalized number of ratings)] -> compute the mean for each year = seasonality_degree.
+    <div class="paragraph-1">
+        <h2 class="paragraph-1-title">Can we estimate a seasonality metrics per beer style ?</h2>
+        <p>
+            On définit un degré de saisonnalité:
+            For each year: [std(seasonality) - std(residuals] / normalized number of ratings)] -> compute the mean for each year = seasonality_degree.
         </p>
+    </div>
+
+    <div class="plot-container">
         <div class="iframe-plot-container" style="width: 60%;">
             <iframe src="html_files/seasonal_beers.html" width="100%" height="300px"></iframe>
         </div>
@@ -374,6 +374,10 @@
             <iframe src="html_files/seasonal_beers_box_plot.html" width="100%" height="300px"></iframe>
         </div>
     </div>
+</body>
+</html>
+
+    
 
     </div>
 

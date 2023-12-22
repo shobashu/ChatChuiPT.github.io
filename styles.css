@@ -182,7 +182,7 @@ li {
     flex: 1; /* Each container will take up an equal amount of space */
     margin-bottom: 0;
     padding-right: 0; /* Assuming you want no padding on the right */
-    margin-right: 5px; /* Add some space between the iframes */
+    margin-right: 1px; /* Add some space between the iframes */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
